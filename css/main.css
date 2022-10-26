@@ -8,7 +8,19 @@ body {
   font-family: 'Work Sans', sans-serif;
   font-weight: bold; }
   body header {
-    display: none; }
+    display: block;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
+    margin: 1rem; }
+  body header h1 a:visited {
+    color: #260209;
+    text-decoration: none; }
+  body header h1 a:link {
+    color: #260209;
+    text-decoration: none; }
   body main {
     display: flex;
     flex-direction: column;
@@ -44,13 +56,16 @@ body {
     list-style: none;
     gap: 1rem; }
 
-/*media queries*/
-@media screen and (min-width: 800px) {
+/*media queries tablet*/
+@media screen and (min-width: 768px) and (max-width: 2300px) {
   body header {
     display: block;
     display: flex;
-    justify-content: space-around;
-    align-items: center; }
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-content: stretch;
+    margin: 1rem; }
   body header h1 a:visited {
     color: #260209;
     text-decoration: none; }
@@ -80,7 +95,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 2fr);
     grid-template-rows: 0.5fr 1fr 0.5fr 0.5fr;
-    grid-template-areas: "p img" "h2 img" "m-texto img" "boton img";
+    grid-template-areas: "h2 img" "m-texto img" "boton img";
     justify-content: center;
     justify-items: center; }
   body main p {
@@ -125,10 +140,10 @@ body {
   body section div p {
     text-align: center; }
   body footer {
-    display: block;
+    grid-area: footer;
     display: flex;
-    justify-content: space-around;
-    align-items: center; }
+    align-items: center;
+    margin-top: 2rem; }
   body footer nav ul {
     display: flex;
     list-style: none;
@@ -142,9 +157,31 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 2fr);
     grid-template-rows: 0.5fr 1fr 0.5fr 0.5fr;
-    grid-template-areas: "p iframe" "h2 iframe" "m-texto iframe" "boton iframe";
+    grid-template-areas: "h2 iframe" "formulario iframe" "boton iframe";
     justify-content: center;
     justify-items: center; }
+  body .formulario {
+    list-style-type: none;
+    padding: 0;
+    border-radius: 3px; }
+  body ul {
+    list-style: none; }
+  body .form-row {
+    display: flex;
+    justify-content: flex-end;
+    padding: .5em; }
+  body .form-row > label {
+    padding: .5em 1em .5em 0;
+    flex: 1; }
+  body .form-row > input {
+    flex: 2; }
+  body .form-row > input,
+  body .form-row > button {
+    padding: .5em; }
+  body .form-row > button {
+    background: gray;
+    color: white;
+    border: 0; }
   body main p {
     grid-area: p; }
   body main iframe {
@@ -167,7 +204,7 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 2fr);
     grid-template-rows: 0.5fr 1fr 0.5fr 0.5fr;
-    grid-template-areas: "p carouselExampleControls" "h2 carouselExampleControls" "m-texto carouselExampleControls" "boton carouselExampleControls";
+    grid-template-areas: "h2 carouselExampleControls" "m-texto carouselExampleControls" "boton carouselExampleControls";
     justify-content: center;
     justify-items: center; }
   body main p {

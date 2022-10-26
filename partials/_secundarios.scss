@@ -8,13 +8,43 @@
     grid-template-columns: repeat(2, 2fr) ;
     grid-template-rows: 0.5fr 1fr 0.5fr 0.5fr;
     grid-template-areas: 
-    "p iframe"
     "h2 iframe"
-    "m-texto iframe"
+    "formulario iframe"
     "boton iframe";
     justify-content:center;
     justify-items: center;
 }
+
+.formulario {
+    list-style-type: none;
+    padding: 0;
+    border-radius: 3px;
+  }
+
+  ul {
+    list-style: none;
+  }
+  .form-row {
+    display: flex;
+    justify-content: flex-end;
+    padding: .5em;
+  }
+  .form-row > label {
+    padding: .5em 1em .5em 0;
+    flex: 1;
+  }
+  .form-row > input {
+    flex: 2;
+  }
+  .form-row > input,
+  .form-row > button {
+    padding: .5em;
+  }
+  .form-row > button {
+   background: gray;
+   color: white;
+   border: 0;
+  }
 
 main p{
     grid-area: p;
@@ -42,6 +72,7 @@ main .boton{
 main .boton:hover{
     transform: scale(1.1);
 }
+
 }
 
     /*estilos main detalles*/
@@ -54,7 +85,6 @@ main .boton:hover{
             grid-template-columns: repeat(2, 2fr) ;
             grid-template-rows: 0.5fr 1fr 0.5fr 0.5fr;
             grid-template-areas: 
-            "p carouselExampleControls"
             "h2 carouselExampleControls"
             "m-texto carouselExampleControls"
             "boton carouselExampleControls";
